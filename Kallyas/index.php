@@ -10,7 +10,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$conn->query("CREATE TABLE IF NOT EXISTS users (id INT AUTO_INCREMENT PRIMARY KEY, username VARCHAR(20), email VARCHAR(90), message VARCHAR(350), passro)");
+$conn->query("CREATE TABLE IF NOT EXISTS users (id INT AUTO_INCREMENT PRIMARY KEY, username VARCHAR(20), email VARCHAR(90), message VARCHAR(350), password)");
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (isset($_POST['sent'])) {
